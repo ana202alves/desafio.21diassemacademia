@@ -1,0 +1,232 @@
+/* Estilos gerais */
+:root {
+  --pink: #ff6b81;
+  --text: #333;
+  --background: #ffffff;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Cabeçalho / Seção principal */
+.hero {
+  background: url('https://via.placeholder.com/1200x500/ffd1dc/000000?text=Mulher+treinando+em+casa') no-repeat center/cover;
+  position: relative;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+}
+
+/* Destaques / Recursos */
+.features {
+  padding: 50px 0;
+}
+
+.features h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--text);
+}
+
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.feature-item {
+  flex: 1;
+  min-width: 220px;
+  margin: 10px;
+  padding: 20px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.feature-item h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  color: var(--pink);
+  margin-bottom: 10px;
+}
+
+.feature-item p {
+  font-size: 1rem;
+  color: var(--text);
+}
+
+/* Seção "Para quem é" */
+.target {
+  padding: 50px 0;
+}
+
+.target h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.target p {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.target ul {
+  list-style: none;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.target li {
+  margin: 10px 0 10px 30px;
+  position: relative;
+  font-size: 1rem;
+}
+
+.target li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--pink);
+  font-weight: bold;
+}
+
+/* Depoimentos */
+.testimonials {
+  padding: 50px 0;
+  background-color: #fdfdfd;
+}
+
+.testimonials h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--text);
+}
+
+.testimonial {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  padding: 20px;
+  background-color: #fff;
+  border-left: 5px solid var(--pink);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.testimonial p {
+  margin: 0;
+  font-style: italic;
+  color: var(--text);
+}
+
+.author {
+  text-align: right;
+  font-weight: 600;
+  margin-top: 10px;
+  color: var(--text);
+}
+
+/* Preço promocional e botão de compra */
+.pricing {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.pricing h2 {
+  font-size: 2rem;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.pricing p {
+  font-size: 1.2rem;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #aaa;
+  margin-right: 10px;
+}
+
+.price {
+  font-size: 2rem;
+  color: var(--pink);
+  font-weight: 600;
+}
+
+.btn-buy {
+  display: inline-block;
+  background-color: var(--pink);
+  color: #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-buy:hover {
+  background-color: #e0556b;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .feature-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .feature-item {
+    max-width: 90%;
+  }
+}
